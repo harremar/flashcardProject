@@ -1,0 +1,612 @@
+#main-menu {
+    display: block;
+    height: 100px;
+    width: 100%;
+    background: var(--darkblue-color);
+    margin: 0px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  #main-menu #main-menu-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  #main-menu .logo{
+    color: var(--yellow-color);
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    margin-right: 30px;
+  }
+
+  #main-menu a {
+    color: var(--white-color);
+    font-size: 1.0rem;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 10px;
+    position: relative;
+    
+    transition: 0.3s ease;
+}
+#main-menu #main-menu-left a:hover .underline {
+    display: block;
+}
+#main-menu #main-menu-left a .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 5px;
+    background-color: var(--yellow-color);
+    display: none;
+    transition: 0.3s ease;
+}
+#main-menu #main-menu-left a:hover {
+    /* background-color: rgba(255, 255, 255, 0.05); */
+    display: flex;
+    cursor: pointer;
+}
+
+#main-menu #main-menu-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#main-menu #main-menu-right a{
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+#main-menu #main-menu-right #logbtn:hover{
+    margin: 5px;
+    background-color: var(--teal-color);
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#main-menu #main-menu-right #signbtn:hover{
+    cursor: pointer;
+    margin: 5px;
+    background-color: var(--orange-color);
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+#userIconCirc{
+
+  width: 35px;
+  height: 35px;
+  background-color: var(--yellow-color);
+  color: white;
+  /* display: none; */
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+#userIconCirc:hover{
+  cursor: pointer;
+  background-color: var(--teal-color);
+}
+
+#userIconCirc2{
+  width: 60px;
+  height: 60px;
+  background-color: var(--yellow-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  border-radius: 50px;
+  margin: 0 auto;
+  transition: 0.3s ease;
+}
+
+
+  #hamburger-menu {
+    height: 100px;
+    width: 100%;
+    background: var(--darkblue-color);
+    margin: 0px;
+    padding: 20px 30px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+   #menu-left{
+    width: 200px;
+
+  }
+  #menu-left .logo{
+    color: var(--yellow-color);
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    margin-right: 30px;
+  }
+
+  #menu-right{
+
+  }
+  #menu-right #ham-menu{
+    width: 40px;
+    height: 40px;
+    background-color: var(--darkblue-color);
+    border: none;
+    
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.3s ease;
+  }
+  .hamburger:hover{
+    background-color: var(--teal-color);
+    cursor: pointer;
+  }
+  
+  .bar {
+    background-color: var(--white-color);
+    height: 3px;
+    width: 22px;
+    margin: 1px 0;
+    border-radius: 2px;
+    transition: 0.4s;
+  }
+
+  #sidebar-menu{
+    position: absolute;
+    right: 80px;
+    top: 50px;
+    min-height: 200px;
+    width: 220px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    /* color: white; */
+    display: block;
+    z-index: 100;
+  }
+
+  #sidebar-menu .top-sideBar{
+    width: 100%;
+    height: 30px;
+    position: relative;
+    /* background-color: red; */
+    color: #034160;
+  }
+
+  #sidebar-menu .sidebar-links2 .profileInfo{
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  #updateAccount{
+    width: 100%;
+    min-height: 140px;
+    /* height: 100px; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #updateAccount h1{
+    font-size: 16px;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: lighter;
+  }
+
+  #updateAccount .btn{
+    width: 100%;
+    height: 20px;
+    border: none;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    }
+
+    #updateAccount .btn:hover{
+        background-color: #fff7e1;
+    }
+    #updateAccount .btn2{
+        border-radius: 10px;
+        width: 100%;
+        height: 20px;
+        border: none;
+        background-color: var(--yellow-color);
+        color: white;
+        padding: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        transition: 0.3s ease;
+        cursor: pointer;
+        margin: 3px;
+        }
+
+  #updateAccount label{
+    font-size: 12px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #updateAccount input{
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 190px;
+    font-size: 12px;
+    background-color: #f5f5f5;
+    outline: none;
+  }
+
+  #updateUser, #deleteUser{
+    margin: 10px auto;
+    border: none;
+    background-color: rgba(33, 157, 188, 0.7);
+    border-radius: 20px;
+    height: 30px;
+    width: 190px;
+    padding-left: 10px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.3s ease;
+    
+}
+
+#updateUser:hover, #deleteUser:hover{
+    cursor: pointer;
+    background-color: var(--teal-color);
+}
+
+  #sidebar-menu .sidebar-links2 h5 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 5px;
+    padding-top: 15px;
+
+    font-size: 16px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: lighter;
+  }
+
+  #sidebar-menu .sidebar-links2 h6 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: lighter;
+    color: #adb4c5;
+  }
+  #sidebar-menu .top-sideBar button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;    
+    background-color: rgba(255, 255, 255, 0.1);
+    /* color: white; */
+    font-size: 1.5rem;
+    border-radius: 20px;
+    transition: 0.3s ease;
+  }
+  #sidebar-menu .top-sideBar button:hover{   
+    background-color: var(--teal-color);
+    cursor: pointer;
+    color: white;
+  }
+
+  #sidebar-menu .sidebar-links2{
+    min-height: 180px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  
+
+  #sidebar-menu .sidebar-links{
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    /* background-color: red; */
+    
+  }
+  #sidebar-menu .sidebar-links2 a{
+    /* color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    /* background-color: red; */
+    border-radius: 0;
+    width: 100%;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    /* border-bottom: 2px solid var(--yellow-color); */
+
+  }
+  
+  #sidebar-menu .sidebar-links2 a:hover .underline {
+    display: block;
+}
+#sidebar-menu .sidebar-links2 a .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--yellow-color);
+    display: none;
+    transition: 0.3s ease;
+}
+#sidebar-menu .sidebar-links2 a:hover {
+    /* background-color: rgba(255, 255, 255, 0.05); */
+    display: flex;
+    cursor: pointer;
+}
+
+
+footer {
+  background: #034160;
+  height: auto;
+  width: 100%;
+  padding-top: 40px;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content .columns{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+}
+.footer-content .columns .column{
+  width: 280px;
+  min-height: 150px;
+  margin: 40px auto;
+  padding: 5px;
+}
+.footer-content .columns .column h2{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.footer-content .columns .column p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.0rem;
+  color: white;
+  transition: 0.3s ease;
+}
+.footer-content .columns .column p:hover{
+  cursor: pointer;
+  color: var(--yellow-color);
+}
+
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  color: white;
+}
+
+
+.footer-bottom {
+  background: var(--darkblue-color);
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  float: left;
+  font-size: 14px;
+  word-spacing: 2px;
+}
+
+.footer-bottom p a {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+}
+
+.footer-menu {
+  float: right;
+}
+
+.footer-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-menu ul li {
+  padding-right: 10px;
+  display: block;
+}
+
+.footer-menu ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.footer-menu ul li a:hover {
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 750px) {
+  footer .footer-content {
+    padding: 20px;
+    font-size: 14px;
+  }
+  footer .footer-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .footer-bottom .footer-menu .f-menu {
+    margin: 0 auto;
+    max-width: 330px;
+    font-size: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: center;
+    align-items: center;
+  }
+  footer .footer-bottom .footer-menu .f-menu li {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+@media (max-width: 500px) {
+  .footer-bottom p {
+    float: none;
+  }
+  .footer-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+
+  @media screen and (max-width: 730px) {
+    #userIconCirc{
+      display: flex;
+    }
+    #main-menu {
+      display: none;
+    }
+    #hamburger-menu {
+      display: flex;
+    }
+  }
+  
+
+  /* Add this to your CSS file */
+@media print {
+  .header, .footer, #main-menu, #hamburger-menu, #sidebar-menu {
+    display: none; /* Hide the header and footer when printing */
+  }
+}

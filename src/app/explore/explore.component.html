@@ -1,0 +1,58 @@
+<!-- <button (click)="createNewDeck()">Create New Deck</button> -->
+
+<div class="exploreSection">
+    <div class="exploreSection-search">
+        <div class="search">
+            <input type="text" [(ngModel)]="word" placeholder="Search for study sets">
+            <button id="searchBtn" (click)="searchAll()">Seach</button>
+        </div>
+
+        <div class="subjectsearch">
+            <button class="scroll-button left-button" (click)="scrollLeft()">&#9665;</button>
+            <button id="{{subject}}" (click)="searchCat(subject)" *ngFor="let subject of visibleSubjects">{{subject}}</button><button class="scroll-button right-button" (click)="scrollRight()">&#9655;</button>
+          </div>
+          
+          
+
+    </div>
+    <div class="recent" *ngIf="recentlyVisitedDecks && recentlyVisitedDecks.length > 0">
+        <!-- <h3>Recently Visited Decks</h3> -->
+        <div class="decksHolder2">
+            <div *ngFor="let deck of recentlyVisitedDecks" (click)="navigateToDeck(deck.id)">
+                <div id="{{deck.id}}" class="deck">
+                    <h1>{{ deck.name }}</h1>
+                    <h2>{{deck.email}}</h2>
+                    <h6>{{deck.time}}</h6>
+                    <p>{{deck.description}}</p>
+                    <!-- <p>{{deck.time}}</p> -->
+                    <p class="sub">{{ deck.subject }}</p>
+                    <p class="term">{{ deck.cardCount }} terms</p>   
+                    <div class="underline"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="decksHolder" >
+            <div *ngFor="let deck of getDecksForCurrentPage()" (click)="navigateToDeck(deck.id)" >
+                <div id="{{deck.id}}" class="deck">
+                    <h1>{{ deck.name }}</h1>
+                    <h2>{{deck.email}}</h2>
+                    <h6> {{deck.time}}</h6>
+                    <p>{{deck.description}}</p>
+                    <!-- <p>{{deck.time}}</p> -->
+                    <p class="sub">{{ deck.subject }}</p>
+                    <p class="term">{{ deck.cardCount }} terms</p>   
+                    
+            <div class="underline"></div>
+                </div>
+            </div>
+    </div>
+    <div class="deckpageControl">
+        <div class="btn " (click)="prevPage()">&#9665;</div>
+        <div>{{ currentPage }}</div>
+
+        <div class="btn" (click)="nextPage()">&#9655;</div>
+    </div>
+</div>
+

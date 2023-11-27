@@ -1,0 +1,24 @@
+<div class="exploreSection">
+    
+    <h1 class="name">{{fullName}}'s Decks</h1>
+    <div class="decksHolder" >
+            <div *ngFor="let deck of getDecksForCurrentPage()" (click)="navigateToDeck(deck.id)" >
+                <div id="{{deck.id}}" class="deck">
+                    <h1>{{ deck.name }}</h1>
+                    <p>{{deck.description}}</p>
+                    <h6> {{deck.time}}</h6>
+                    <p class="sub">{{ deck.subject }}</p>
+                    <p class="term">{{ deck.cardCount }} terms</p>
+                    <div class="edit" (click)="navigateToEditDeck(deck.id)"></div>
+                    
+            <div class="underline"></div>
+                </div>
+            </div>
+            <div class="deckpageControl">
+                <div class="btn " (click)="prevPage()">&#9665;</div>
+                <div>{{ currentPage }}</div>
+                <div class="btn" (click)="nextPage()">&#9655;</div>
+            </div>
+      
+      </div>
+</div>

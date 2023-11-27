@@ -1,0 +1,69 @@
+<div class="deckDetail">
+    <div class="deckInfo">
+        <h5 class="back" (click)="navigateToYourDecks()"><< go back</h5>
+        <h1>{{ deck.name }}</h1>
+        <p class="sub">Subject: {{ deck.subject }}</p>
+        <div class="deckTop">
+            <div class="creatorContent">
+                <img class="circ" *ngIf="deck.profileImg; else defaultImage" [src]="deck.profileImg" alt="">
+                <ng-template #defaultImage>
+                    <img  src="../../assets/images/icons8-user-default-50.png" alt="Default Image">
+                </ng-template>
+                <div class="creator">
+                    <p>Created by</p>
+                    <h2>{{ deck.email }}</h2>
+                </div>
+            </div>
+            <div class="deckoptions">
+                <div class="print" (click)="printPage()"></div>
+                <div class="edit" (click)="navigateToEditDeck(deck.id)"></div>
+                <div class="delete" (click)="deleteDeck()"></div>
+                <div class="more" (click)="moreOption()"></div>
+
+
+            </div>
+
+            <div *ngIf="d === 'active'" class="deleteDeckHolder">
+                <p>Are you sure you want to delete {{deck.name}}?</p>
+                <div class="btnHolder">
+                    
+                    <div class="btn" (click)="deleting(deck.id)">Yes, Delete</div>
+                    <div class="btn2" (click)="deleteDeck()">Close</div>
+                    
+                </div>
+                
+            </div>
+
+            <div *ngIf="m === 'active'" class="moreDeckHolder">
+                <div class="btnHolder">
+                    <div class="btn" (click)="copyLink()">Copy Link</div>
+
+                
+                    <div class="btn2" (click)="moreOption()">Close</div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <h3>{{ deck.description }}</h3>
+    </div>
+
+    
+    <div class="studySetBtn" (click)="navigateToStudyDeck(deck.id)">Study Deck</div>
+      
+    <div class="cardsHolder">
+        <div class="card" *ngFor="let card of deck.cards">
+            <div class="term"> {{ card.term }} </div>
+            <div class="def">
+                <div style="padding-bottom: 10px;">
+                    {{ card.definition }}
+                </div>
+                <img class="imgCard" *ngIf="card.image" src="{{card.image}}" alt="{{card.image}}">
+         </div>
+
+        </div>
+    </div>
+    
+</div>
+
+  

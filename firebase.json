@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "flashcardProject",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "n423-data-harrell": {
+      "hosting": {
+        "flashcardProject": [
+          "n423-data-harrell"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "n423-data-harrell"
+  }
+}

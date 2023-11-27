@@ -1,0 +1,60 @@
+<div class="createSection">
+    <div class="createContainer">
+        <div class="deckDescriptionArea">
+          <div class="s">
+            <h6>Title</h6>
+            <input type="text" placeholder="Enter Title" #titleInput [(ngModel)]="deck.name">
+          </div>
+          <div class="ss">
+            <div class="description">
+              <h6>Description</h6>
+              <input type="text" placeholder="Enter Description" #descriptionInput [(ngModel)]="deck.description">
+            </div>
+            <div class="subject">
+              <h6>Subject</h6>
+              <select id="subject" name="subject" #subjectInput [(ngModel)]="deck.subject">
+                <option value="" disabled selected>Choose a subject</option>
+                <option value="English">English</option>
+                <option value="Social Studies">Social Studies</option>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="Art">Art</option>
+                <option value="Music">Music</option>
+                <option value="Languages">Languages</option>
+
+              </select>
+            </div>
+          </div>
+          
+          <div class="card" *ngFor="let card of deck.cards; let i = index">
+            <div class="topcard">
+              <h1>{{i + 1}}</h1>
+              <button class="deleteCard" (click)="deleteCard(i)">X</button>
+            </div>
+            <div class="bottomcard">
+              <div class="inputcontainer">
+                <input type="text" [(ngModel)]="card.term" name="" placeholder="Enter Term" id="">
+                <h6>Term</h6>
+              </div>
+              <div class="inputcontainer">
+                <input type="text" [(ngModel)]="card.definition" name="" placeholder="Enter Definition" id="">
+                <h6>Definition</h6>
+              </div>
+          
+              <button class="addImageBtn" >
+                <img [src]="card.image ? card.image : uploadImageURL" alt="">
+
+                <input type="file" id="myImage" #upload  >
+                
+              </button>
+              <button class="uploadImageBtn" (click)="uploadFile(upload, i)">Upload </button>
+            </div>
+          </div>
+          
+          
+
+        <button class="addCardBtn" (click)="addCard()">+ Add Card</button>
+        <button class="createDeckBtn" (click)="updateDeck()">Update Deck</button>
+    </div>
+ </div>
+ 

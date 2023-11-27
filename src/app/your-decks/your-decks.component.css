@@ -1,0 +1,207 @@
+.exploreSection{
+    width: 100%;
+    min-height: 82vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.exploreSection .name{
+    padding:  20px;
+    margin: 0 auto;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+        font-size: 20px;
+}
+
+
+.exploreSection .decksHolder {
+    max-width: 900px;
+    min-height: 400px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap; 
+ }
+ 
+
+.exploreSection .decksHolder .deck{
+    width: 280px;
+    min-height: 180px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    position: relative;
+    transform: 0.3s ease;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+.exploreSection .decksHolder .deck:hover .underline {
+    display: block;
+    border-radius: 0px;
+
+}
+.exploreSection .decksHolder .deck .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--yellow-color);
+    display: none;
+    transition: 0.3s ease;
+    margin: 0 auto;
+}
+.exploreSection .decksHolder .deck:hover {
+    background-color: #fff7e1;
+    cursor: pointer;
+    border-radius: 0px;
+
+}
+
+
+.exploreSection .decksHolder .deck h1{
+    font-size: 24px;
+    color: var(--darkblue-color);
+    font-weight: bolder;
+    margin-bottom: 4px;
+    padding-right: 10px;
+}
+
+.exploreSection .decksHolder .deck .term{
+    background-color: var(--yellow-color);
+    border-radius: 20px;
+    width: 70px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    color: white;
+}
+
+.exploreSection .decksHolder .deck .sub{
+    background-color: var(--teal-color);
+    border-radius: 20px;
+    width: 100px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    color: white;
+    text-align: center;
+}
+
+.exploreSection .decksHolder .deck .edit{
+    width: 20px;
+    height: 20px;
+    transition: 0.3s ease;
+    background-image: url(../../assets/images/edit.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+
+.exploreSection .decksHolder .deck p{
+    font-size: 14px;
+    /* color: #cdcdcd; */
+    
+    color: var(--darkblue-color);
+}
+
+.exploreSection .decksHolder .deck h2{
+    font-size: 14px;
+    padding: 0;
+    margin-bottom: 10px;
+    color: #0230477f;
+    font-weight: lighter;
+    /* color: var(--darkblue-color); */
+}
+
+
+.deckpageControl{
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.deckpageControl .btn {
+    background-color: var(--yellow-color);
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;  
+    margin: 10px;
+}
+.deckpageControl .btn:hover{
+    background-color: var(--orange-color);
+}
+
+.exploreSection .decksHolder .deck h6{
+    font-size: 10px;
+    padding: 0;
+    margin-bottom: 10px;
+    color: #0230477f;
+    font-weight: lighter;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    /* color: var(--darkblue-color); */
+}
+
+
+@media screen and (max-width: 900px) {
+    .exploreSection .name{
+        /* padding:  20px 50px; */
+        margin: 0 auto;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+        font-size: 16px;
+    }
+    .exploreSection .decksHolder{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .exploreSection .exploreSection-search{
+        max-width: 340px;
+    }
+
+    .exploreSection .exploreSection-search .subjectsearch button{
+        width: 60px;
+        font-size: 10px;
+    }
+    
+}

@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --lightblue-color: #ecf2ff;
+    --teal-color: #219ebc;
+    --darkblue-color: #023047;
+    --yellow-color: #ffb703;
+    --orange-color: #fb8500;
+    --white-color: #fff;
+
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 16px
+  }
+
+  body {
+    background-color: var(--white-color);
+    color: var(--main-color);
+  }
+
+  

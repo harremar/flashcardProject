@@ -1,0 +1,382 @@
+.deckDetail{
+    max-width: 860px;
+    min-height: 52vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.deckDetail .deckInfo{
+    width: 100%;
+    min-height: 150px;
+    margin: 0 auto;
+}
+.deckDetail .deckInfo h1{
+    width: 100%;
+    margin: 0;
+    font-size: 3.0rem;
+
+}
+.deckDetail .deckInfo h5{
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-weight: lighter;
+    color: var(--yellow-color);
+    transition: 0.3s ease;
+}
+
+.deckDetail .deckInfo h5:hover{
+    color: var(--orange-color);
+}
+
+
+.deckDetail .deckInfo .sub{
+    width: 100%;
+    margin: 8px auto;
+    color: #c8d2e6;
+    font-size: 16px;
+
+}
+.deckDetail .deckInfo .deckTop{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+.deckDetail .deckInfo .deckTop .creatorContent{
+    width: 250px;
+    /* background-color: beige; */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.deckDetail .deckInfo .deckTop .creatorContent .circ{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--yellow-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+
+}
+.deckDetail .deckInfo .deckTop .creatorContent .creator{
+    width: 200px;
+    /* background-color: rebeccapurple; */
+}
+.deckDetail .deckInfo .deckTop .creatorContent .creator p {
+    margin: 3px;
+}
+
+.deckDetail .deckInfo .deckTop .creatorContent .creator h2 {
+    margin: 3px;
+    font-size: 10px;
+}
+
+.deckDetail .deckInfo .deckTop .deckoptions{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.deckDetail .deckInfo .deckTop .deckoptions .edit{
+    width: 30px;
+    height: 30px;
+    transition: 0.3s ease;
+    background-image: url(../../assets/images/edit.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.deckDetail .deckInfo .deckTop .deckoptions .print{
+    width: 30px;
+    height: 30px;
+    transition: 0.3s ease;
+    background-image: url(../../assets/images/print.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.deckDetail .deckInfo .deckTop .deckoptions .delete{
+    width: 30px;
+    height: 30px;
+    transition: 0.3s ease;
+    background-image: url(../../assets/images/trash.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.deckDetail .deckInfo .deckTop .deckoptions .more{
+    width: 30px;
+    height: 30px;
+    transition: 0.3s ease;
+    background-image: url(../../assets/images/more.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.deckDetail .deckInfo .deckTop .moreDeckHolder{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    min-height: 100px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    }
+    
+    .deckDetail .deckInfo .deckTop .moreDeckHolder .btnHolder{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        
+    }
+    
+    .deckDetail .deckInfo .deckTop .moreDeckHolder .btn{
+        width: 100%;
+        height: 20px;
+        border: none;
+        padding: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        transition: 0.3s ease;
+        cursor: pointer;
+        margin-bottom: 3px;
+        border-radius: 10px;
+        }
+
+        .deckDetail .deckInfo .deckTop .moreDeckHolder .btn:hover{
+            background-color: #fff7e1;
+        }
+        .deckDetail .deckInfo .deckTop .moreDeckHolder .btn2{
+            border-radius: 10px;
+            width: 100%;
+            height: 20px;
+            border: none;
+            background-color: var(--yellow-color);
+            color: white;
+            padding: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            transition: 0.3s ease;
+            cursor: pointer;
+            }
+    
+
+.deckDetail .deckInfo .deckTop .deleteDeckHolder{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    min-height: 150px;
+    text-align: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    }
+    
+    .deckDetail .deckInfo .deckTop .deleteDeckHolder .btnHolder{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        
+    }
+    
+    .deckDetail .deckInfo .deckTop .deleteDeckHolder .btn{
+        width: 100%;
+        height: 20px;
+        border: none;
+        padding: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        transition: 0.3s ease;
+        cursor: pointer;
+        margin-bottom: 3px;
+        border-radius: 10px;
+        }
+
+        .deckDetail .deckInfo .deckTop .deleteDeckHolder .btn:hover{
+            background-color: #fff7e1;
+        }
+        .deckDetail .deckInfo .deckTop .deleteDeckHolder .btn2{
+            border-radius: 10px;
+            width: 100%;
+            height: 20px;
+            border: none;
+            background-color: var(--yellow-color);
+            color: white;
+            padding: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            transition: 0.3s ease;
+            cursor: pointer;
+            }
+    
+
+.deckDetail .deckInfo h3{
+    font-weight: lighter;
+    width: 100%;
+}
+
+.deckDetail .studySetBtn{
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(76, 191, 220);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+
+    transition: 0.3s ease;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.deckDetail .studySetBtn:hover{
+    background-color: var(--teal-color);
+    cursor: pointer;
+}
+
+
+.deckDetail .cardsHolder{
+    width: 100%;
+    min-height: 200px;
+    margin: 0 auto; 
+}
+
+.deckDetail .cardsHolder .card{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 80px ;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.deckDetail .cardsHolder .card .term{
+    width: 35%;
+    padding: 20px;
+    /* border-right: 1px solid var(--teal-color); */
+    /* min-height: 40px; */
+}
+.deckDetail .cardsHolder .card .def{
+    width: 65%;
+    padding: 20px;
+    border-left: 1px solid var(--teal-color);
+    margin: 5px;
+
+}
+
+.imgCard{
+    max-width: 200px; height: 150px; background-repeat: no-repeat; background-size: contain; background-position: center;
+}
+
+@media screen and (max-width: 450px) {
+    .deckDetail .deckInfo h1{
+        font-size: 2.0rem;
+    
+    }
+    .deckDetail .deckInfo h3{
+        font-size: 16px;
+    }
+    .deckDetail .cardsHolder .card{
+        flex-direction: column;
+    }
+    .deckDetail .cardsHolder .card .term{
+        width: 100%;
+
+    }
+    .deckDetail .cardsHolder .card .def{
+        border-left: none;
+        border-top: 1px solid var(--teal-color);
+
+        width: 100%;
+    }
+}
+
+
+
+/* Add this to your CSS file */
+@media print {
+    .deckDetail .deckInfo, .deckDetail .studySetBtn {
+        display: none; /* Hide the header and footer when printing */
+      }
+    
+      .deckDetail .cardsHolder .card .imgCard {
+        display: block; /* or set other styles as needed */
+        max-width: 200px; 
+        height: 100px; 
+      }
+    
+
+    .deckDetail .cardsHolder{
+        width: 100%;
+        min-height: 210px;
+        margin: 0 auto; 
+    }
+    
+    .deckDetail .cardsHolder .card{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        min-height: 226px ;
+        box-shadow: none;
+        border-radius: 0;
+        margin-top: 10px;
+        border-bottom: var(--teal-color) 1px dashed;
+    }
+    
+    .deckDetail .cardsHolder .card .term{
+        width: 50%;
+        padding: 20px;
+        /* box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; */
+        min-height: 210px ;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+
+        /* border-right: 1px solid var(--teal-color); */
+        /* min-height: 40px; */
+    }
+    .deckDetail .cardsHolder .card .def{
+        width: 50%;
+        padding: 20px;
+        border-left: none;
+        margin: 5px;
+        /* box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; */
+        min-height: 200px ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+  }
+
+

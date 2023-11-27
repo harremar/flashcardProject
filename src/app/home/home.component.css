@@ -1,0 +1,92 @@
+.wave-header{
+    min-height: 90vh;
+    width: 100%;
+    position: relative;
+    
+}
+
+.wave-header .wave-header-content{
+    max-width: 400px;
+    min-height: 200px ;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+}
+.wave-header .wave-header-content h1 {
+    color: var(--orange-color);
+    font-size: 3.8rem;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
+
+.wave-header .wave-header-content p {
+    color: var(--darkblue-color);
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.wave-header .wave-header-content .wave-headerbtn {
+    color: var(--white-color);
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    background-color: rgba(33, 157, 188, 0.7);
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    z-index: 20;
+    position: relative;
+}
+
+.wave-header .wave-header-content .wave-headerbtn:hover {
+    cursor: pointer;
+    background-color: var(--teal-color);
+}
+
+#wave{
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        left: 0;
+}
+
+.homecontent-bluespace{
+    width: 100%;
+    min-height: 350px;
+    background-color: var(--teal-color);
+}
+
+.homecontent2{
+    width: 100%;
+    min-height: 600px;
+    background-color: var(--white-color);
+}
+
+
+
+@media screen and (max-width: 730px) {
+    .wave-header{
+        min-height: 70vh;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .wave-header{
+        min-height: 85vh;
+    }
+
+    .wave-header .wave-header-content{
+        padding: 30px;
+    }
+
+    .wave-header .wave-header-content button{
+        margin-top: 25px;
+        height: 80px;
+        width: 270px;
+        border-radius: 50px;
+    }
+}

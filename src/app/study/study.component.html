@@ -1,0 +1,53 @@
+<div class="studySection">
+    <div class="topInfo">
+        <p>{{ currentCardIndex + 1 }}/{{ deck.cards.length }}</p>
+        <h1>{{ deck.name }}</h1>
+        
+        
+        <div class="shuffleBtn" (click)="startOver()">
+            <img src="../../assets/images/shuffle.png" alt="">
+        </div>
+        <div class="oppositeBtn" (click)="switch()">
+            <img src="../../assets/images/opp.png" alt="">
+        </div>
+        <div class="exitBtn" (click)="navigateToDeck(deck.id)"> 
+            <img src="../../assets/images/exit.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="flashcardHolder">
+        <div class="flashcard" [@flipState]="flip" (click)="toggleFlip()">
+            
+            <div class="term">{{ currentCard?.term }}</div>
+            <div class="img" *ngIf="currentCard?.image" [style.background-image]="'url(' + currentCard?.image + ')'" ></div>
+            <div class="def">
+                <img *ngIf="currentCard?.image" src="{{currentCard?.image}}" alt="">
+                <div>
+                    {{ currentCard?.definition }}
+                </div>
+               
+
+            </div>
+          
+            
+        </div>
+           
+        <div class="navigationControls">
+        <button class="btn" (click)="previousCard()" [disabled]="currentCardIndex === 0">
+            <img src="../../assets/images/left.png" alt="">
+        </button>
+        <button class="btn" (click)="nextCard()" [disabled]="currentCardIndex === deck.cards.length - 1">
+            <img src="../../assets/images/right.png" alt="">
+        </button>
+        
+     </div>
+        <!-- Last card with buttons -->
+        <div class="lastCard" *ngIf="currentCardIndex === deck.cards.length - 1">
+            <button class="btn" (click)="startOver()">Start Over</button>
+            <button class="btn" (click)="navigateToDeck(deck.id)">Close Study Set</button>
+        </div>
+     </div>
+
+     
+</div>
